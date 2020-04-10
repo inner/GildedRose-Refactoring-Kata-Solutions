@@ -12,6 +12,22 @@
             SellIn = sellIn;
             Quality = quality;
         }
-        public abstract void Update();
+
+        public virtual void UpdateSellIn()
+        {
+            SellIn = SellIn - 1;
+        }
+
+        public virtual void UpdateQuality()
+        {
+            if (Quality < 0)
+            {
+                Quality = 0;
+            }
+            else if (Quality > 50)
+            {
+                Quality = 50;
+            }
+        }
     }
 }

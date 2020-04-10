@@ -10,19 +10,11 @@ namespace csharpcore.Models
         {
         }
 
-        public override void Update()
+        public override void UpdateQuality()
         {
-            SellIn = SellIn - 1;
             // "Conjured" items degrade in Quality twice as fast as normal items
             Quality = Quality - 4;
-            if (Quality < 0)
-            {
-                Quality = 0;
-            }
-            else if (Quality > 50)
-            {
-                Quality = 50;
-            }
+            base.UpdateQuality();
         }
     }
 }

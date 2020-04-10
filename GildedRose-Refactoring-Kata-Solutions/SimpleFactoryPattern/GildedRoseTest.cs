@@ -8,10 +8,11 @@ namespace csharpcore
         [Fact]
         public void foo()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
+            IList<Item> Items = new List<Item> {ItemFactory.CreateItem("Aged Brie", 10, 10)};
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.Equal("fixme", Items[0].Name);
+            Assert.Equal(9, Items[0].SellIn);
+            Assert.Equal(11, Items[0].Quality);
         }
     }
 }

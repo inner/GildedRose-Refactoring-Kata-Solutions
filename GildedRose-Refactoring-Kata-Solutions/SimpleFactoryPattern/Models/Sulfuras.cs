@@ -10,7 +10,7 @@ namespace csharpcore.Models
         {
         }
 
-        public override void Update()
+        public override void UpdateSellIn()
         {
         }
     }

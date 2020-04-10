@@ -8,18 +8,10 @@ namespace csharpcore.Models
     {
         public StandardItem(string name, int sellIn, int quality) 
             : base(name, sellIn, quality) { }
-        public override void Update()
+        public override void UpdateQuality()
         {
-            SellIn = SellIn - 1;
             Quality = Quality - 2;
-            if (Quality < 0)
-            {
-                Quality = 0;
-            }
-            else if(Quality > 50)
-            {
-                Quality = 50;
-            }
+            base.UpdateQuality();
         }
     }
 }
