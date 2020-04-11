@@ -17,7 +17,7 @@ namespace csharpcore
                     return new BackstagePasses(name, sellIn, quality);
                 case "Sulfuras, Hand of Ragnaros":
                     return new Sulfuras(name, sellIn, quality);
-                case "Conjured":
+                case "Conjured Mana Cake":
                     return new Conjured(name, sellIn, quality);
                 default:
                     return new StandardItem(name, sellIn, quality);

@@ -12,6 +12,8 @@ namespace csharpcore.Models
 
         public override void UpdateSellIn()
         {
+            // The SellIn property of Sulfuras will never change.
         }
+
     }
 }
