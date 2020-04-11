@@ -26,13 +26,7 @@ namespace csharpcore.Strategy
             {
                 quality = item.Quality + 1;
             }
-
-            if (quality > 50)
-            {
-                quality = 50;
-            }
-
-            return (sellIn, quality);
+            return (sellIn, Helper.ValidateQuality(quality));
         }
     }
 }

@@ -9,11 +9,7 @@ namespace csharpcore.Strategy
         public (int sellIn, int quality) Update(Item item)
         {
             var quality = item.Quality + 1;
-            if (quality > 50)
-            {
-                quality = 50;
-            }
-            return (item.SellIn - 1, quality);
+            return (item.SellIn - 1, Helper.ValidateQuality(quality));
         }
     }
 }

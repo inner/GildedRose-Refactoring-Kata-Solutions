@@ -34,5 +34,6 @@ namespace csharpcore.Strategy
         {
             return _strategy.Update(item);
         }
+
     }
 }
